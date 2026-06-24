@@ -127,7 +127,7 @@ if st.button("Analyze Resume Match", type="primary", disabled=not (uploaded_file
 
         try:
             chat = ChatGroq(
-                model="grok-4",
+                model="openai/gpt-oss-120b",
                 api_key=GROQ_API_KEY,
                 temperature=0.2,          # low randomness → more consistent scoring
                 max_tokens=2200

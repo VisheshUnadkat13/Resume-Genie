@@ -53,6 +53,18 @@ html, body, [class*="css"] {
     min-height: 100vh;
 }
 
+/* ── Header ── */
+[data-testid="stHeader"] {
+    background-color: rgba(26, 26, 46, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(29, 158, 117, 0.15) !important;
+}
+
+[data-testid="stHeader"] * {
+    color: var(--text-light) !important;
+    fill: var(--text-light) !important;
+}
+
 /* ── Main content area ── */
 .main .block-container {
     background: rgba(255,255,255,0.03);
@@ -113,7 +125,7 @@ h2, h3 {
 }
 
 /* ── Body text & markdown ── */
-p, .stMarkdown p, label, .stText {
+p, .stMarkdown p, label, .stText, li {
     color: var(--text-light) !important;
 }
 
@@ -170,6 +182,12 @@ p, .stMarkdown p, label, .stText {
     font-size: 13.5px !important;
     line-height: 1.6 !important;
     transition: border-color 0.2s !important;
+}
+
+.stTextArea textarea:disabled {
+    color: var(--text-light) !important;
+    -webkit-text-fill-color: var(--text-light) !important;
+    opacity: 0.85 !important;
 }
 
 .stTextArea textarea:focus {
@@ -271,7 +289,7 @@ p, .stMarkdown p, label, .stText {
 }
 
 [data-testid="stChatInput"] textarea {
-    color: var(--text-light) !important;
+    color: #1a1a2e !important;
 }
 
 /* ── Columns / card panels ── */
@@ -333,6 +351,29 @@ hr {
     border-left: 3px solid var(--teal) !important;
     padding-left: 1rem !important;
     color: var(--text-muted) !important;
+}
+
+/* ── Tables ── */
+.stMarkdown table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1rem 0 !important;
+    color: var(--text-light) !important;
+}
+
+.stMarkdown th {
+    background-color: rgba(29, 158, 117, 0.15) !important;
+    color: var(--teal-light) !important;
+    border: 1px solid rgba(29, 158, 117, 0.25) !important;
+    padding: 8px 12px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+}
+
+.stMarkdown td {
+    border: 1px solid rgba(29, 158, 117, 0.15) !important;
+    padding: 8px 12px !important;
+    color: var(--text-light) !important;
 }
 
 /* ── Tooltip ── */
